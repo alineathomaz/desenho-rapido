@@ -1,3 +1,14 @@
+randomNumber = Math.floor((Math.random() * quickDrawDataset.length) + 1);
+console.log(quickDrawDataset[randomNumber]);
+sketch = quickDrawDataset[randomNumber];
+document.getElementById('sketchName').innerHTML = 'Esboço a ser desenhado: ' + sketch;
+
+timerCounter = 0;
+timerCheck = "";
+drawnSketch = "";
+answerHolder = "";
+score = 0;
+
 function updateCanvas(){
   background("white");
   randomNumber = Math.floor((Math.random() * quickDrawDataset.lenght) + 1);
@@ -47,7 +58,8 @@ function draw(){
     
     
     document.getElementById('confidence').innerHTML = 'Precisão: ' + Math.round(results[0].confidence * 100) + '%";
-    
+  
+  } 
   
   
   
